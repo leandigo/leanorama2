@@ -1,0 +1,109 @@
+.leanorama-hotspot-anchor {
+    position: relative;
+    -webkit-transform: translateZ(-512px);
+    -moz-transform: translateZ(-512px);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+.leanorama-hotspot-tooltip-anchor {
+    position: absolute;
+    opacity: 0;
+}
+.leanorama-hotspot-tooltip-anchor:not(.visible) {
+    opacity: 0;
+    -webkit-animation: hide-tooltip 1s;
+}
+
+.leanorama-hotspot-tooltip-anchor.visible {
+    opacity: 1;
+    z-index: 1000;
+    -webkit-animation: show-tooltip 1s;
+}
+@-webkit-keyframes show-tooltip {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes hide-tooltip {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.leanorama-hotspot-tooltip {
+    position:absolute;
+    height:40px;
+    margin-top: -68px;
+    padding: 0 10px 0 10px;
+    text-align:right;
+    font:28px/40px sans-serif;
+    color:#000;
+    background: #fff;
+    border: 1px solid #000;
+    -webkit-border-radius: 5px 5px 0 5px;
+    border-radius: 5px 5px 0 5px;
+    white-space: nowrap;
+    right: -14px;
+}
+/*
+.leanorama-hotspot-nav:hover {
+    cursor: pointer;
+}
+*/
+/* creates the larger triangle */
+.leanorama-hotspot-tooltip:before {
+    content:"";
+    position:absolute;
+    bottom:-28px;
+    right: 0;
+    border-width:0 0 28px 14px;
+    border-style:solid;
+    border-color:transparent #fff;
+}
+
+.leanorama-hotspot-gangnam {
+    position: absolute;
+    top: -240px;
+    left: -180px;
+}
+.leanorama-hotspot-corner {
+    max-width: 0;
+    max-height: 0;
+    position: absolute;
+}
+
+.leanorama-hotspot-nav {
+    border: 4px solid #b0b0b0;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    left: -11px;
+    top: -11px;
+    -webkit-animation: pulsate 2s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate 2s ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    opacity: 0.0;
+    /*pointer-events: all;*/
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    33% {opacity: 1.0;}
+    70% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+@-moz-keyframes pulsate {
+    0% {-moz-transform: scale(0.1, 0.1); opacity: 0.0;}
+    33% {opacity: 1.0;}
+    70% {-moz-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.leanorama-hotspot-onscreen {
+    fill: transparent;
+    stroke: transparent;
+}
+
+.leanorama-hotspot-onscreen:hover {
+    cursor: pointer;
+}

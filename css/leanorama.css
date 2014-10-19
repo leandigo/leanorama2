@@ -1,0 +1,103 @@
+.leanorama {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.leanorama-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+    z-index: 100;
+}
+
+.leanorama-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   -webkit-backface-visibility: hidden;
+}
+
+.leanorama-stage {
+    position: relative;
+    max-height: 0;
+    max-width: 0;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+.leanorama-stage-rotate {
+    -webkit-animation: rotateX 20s infinite linear;
+}
+
+.leanorama-cube-rotate {
+    -webkit-animation: rotateY 20s infinite linear;
+}
+
+.leanorama-pause {
+    -webkit-animation-play-state: paused !important;
+}
+
+.leanorama-cube {
+    position: absolute;
+    max-height: 0;
+    max-width: 0;
+/*    top: 50%;
+    left: 50%;
+*/
+    margin: 0;
+    padding: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+.leanorama-side {
+    position: absolute;
+    top: -512px;
+    left: -512px;
+    width: 1024px;
+    height: 1024px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+.leanorama-front {
+    -webkit-transform: rotateY(0deg) translateZ(-512px);
+    -moz-transform: rotateY(0deg) translateZ(-512px);
+}
+
+.leanorama-right {
+    -webkit-transform: rotateY(270deg) translateZ(-512px);
+    -moz-transform: rotateY(270deg) translateZ(-512px);
+}
+
+.leanorama-back {
+    -webkit-transform: rotateY(180deg) translateZ(-512px);
+    -moz-transform: rotateY(180deg) translateZ(-512px);
+}
+
+.leanorama-left {
+    -webkit-transform: rotateY(90deg) translateZ(-512px);
+    -moz-transform: rotateY(90deg) translateZ(-512px);
+}
+
+.leanorama-up {
+    -webkit-transform: rotateX(270deg) translateZ(-512px);
+    -moz-transform: rotateX(270deg) translateZ(-512px);
+}
+
+.leanorama-down {
+    -webkit-transform: rotateX(90deg) translateZ(-512px);
+    -moz-transform: rotateX(90deg) translateZ(-512px);
+}

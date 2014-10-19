@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/leanorama.css" />
+        <link rel="stylesheet" type="text/css" href="css/leanorama.hotspots.css" />
+    </head>
+    <body>
+        <div id="pano"></div>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/leanorama.js"></script>
+        <script src="js/leanorama.hotspot.js"></script>
+        <script>
+            var pano = new Leanorama({
+                selector: '#pano',
+                scenes: {
+                    elevators: {
+                        sides: {
+                            front: 'pano/0000.jpg',
+                            right: 'pano/0001.jpg',
+                            back: 'pano/0002.jpg',
+                            left: 'pano/0003.jpg',
+                            up: 'pano/0004.jpg',
+                            down: 'pano/0005.jpg',
+                        },
+                        hotspots: [
+                            {
+                                pitch: 0,
+                                yaw: 90,
+                                type: 'gangnam'
+                            }
+                            ,{
+                                pitch: 0,
+                                yaw: 0,
+                                text: 'Whats behind door #1?',
+                                target: 'storaleve'
+                            },{
+                                pitch: 25,
+                                yaw: 35
+                            },{
+                                pitch: 35,
+                                yaw: 55
+                            },{
+                                pitch: 45,
+                                yaw: 25
+                            },{
+                                pitch: 55,
+                                yaw: 35
+                            },{
+                                pitch: 65,
+                                yaw: 95
+                            },{
+                                pitch: 75,
+                                yaw: 85
+                            },{
+                                pitch: 85,
+                                yaw: 85
+                            }
+                        ],
+                        default: true
+                    },
+                    storaleve: {
+                        sides: {
+                            front: 'pano/0005.jpg',
+                            right: 'pano/0003.jpg',
+                            back: 'pano/0004.jpg',
+                            left: 'pano/0002.jpg',
+                            up: 'pano/0001.jpg',
+                            down: 'pano/0000.jpg',
+                        },
+                        hotspots: [
+                            {
+                                pitch: 45,
+                                yaw: 34,
+                                text: 'Go Back',
+                                target: 'elevators'
+                            }
+                        ]
+                    }
+                }
+            });
+            var g = pano._leanorama.querySelector('.leanorama-hotspot-gangnam');
+            var i = document.createElement('img');
+            i.src = 'oppa.gif';
+            i.width = 360;
+            i.height = 640;
+            g.appendChild(i);
+        </script>
+    </body>
+</html>
